@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    País de Nascimento: <input type="text" name="txtPais" id="txtPais">
+    <input type="button" value="Verificar" onclick="calcular()">
+   
+    <div id = 'res'></div>
+
+    <script>
+        function calcular () {
+            var txtPa = document.getElementById('txtPais');
+            var pais = String(txtPa.value);
+            var res = document.getElementById('res');
+            var paisEscolhido = 'Brasil';
+
+
+            if (pais == paisEscolhido) {
+                res.innerHTML = '<p> Você é Brasileiro! </p>';
+                res.innerHTML += '<p> E gosta de samba</p>'
+            } else {
+                res.innerHTML = '<p> Você é Estrangeiro! </p>';
+            }
+        }
+    </script>
+</body>
+</html>
+
